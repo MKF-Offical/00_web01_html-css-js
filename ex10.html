@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Object</h1>
+    <H2>CreateObjectSyntax</H2>
+    <script>
+      var coworkers = {
+        programmer: "egoing",
+        developer: "MKF",
+        basketballPlayer: "MJ",
+      };
+      coworkers["ufc player"] = "korean zombie";
+      coworkers.player = "LBJ";
+      document.write("developer: " + coworkers.developer + "<br>");
+      document.write(
+        "basketballPlayer: " + coworkers.basketballPlayer + "<br>",
+      );
+      document.write("ufc player: " + coworkers["ufc player"] + "<br>");
+    </script>
+    <h2>literate</h2>
+    <script>
+      for (var key in coworkers) {
+        //document.write(key + " ");
+        //document.write(coworkers[key] + " <br>");
+        document.write(key + " : " + coworkers[key] + " <br>");
+      }
+    </script>
+    <h2>property&method</h2>
+    <script>
+      coworkers.showAll = function() {
+        for (var key in this) {
+          //document.write(key + " ");
+          //document.write(this[key] + " <br>");
+          document.write(key + " : " + this[key] + " <br>");
+        }
+      };
+      coworkers.showAll();
+    </script>
+  </body>
+</html>
